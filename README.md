@@ -15,6 +15,17 @@ We adopt the same training data from [Uni-Mol](https://openreview.net/forum?id=6
 |--------------------------|------------| ----------- |---------------------------------------------------------------------------------------------------------------------------|
 | molecular pretrain       | 114.76GB   | Jun 10 2022 |https://bioos-hermite-beijing.tos-cn-beijing.volces.com/unimol_data/pretrain/ligands.tar.gz                                |
 
+Dependencies
+------------
+ - [Uni-Core](https://github.com/dptech-corp/Uni-Core), check its [Installation Documentation](https://github.com/dptech-corp/Uni-Core#installation).
+ - rdkit==2022.9.3, install via `pip install rdkit-pypi==2022.9.3`
+
+To use GPUs within docker you need to [install nvidia-docker-2](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker) first. Use the following command to pull the docker image:
+
+```bash
+docker pull dptechnology/unimol:latest-pytorch1.11.0-cuda11.3
+```
+
 Pre-training Command 
 ------------------------------
 
